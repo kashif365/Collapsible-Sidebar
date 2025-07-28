@@ -36,4 +36,4 @@ A responsive and modern collapsible sidebar layout built with HTML, CSS, and Jav
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/kashif365/Collapsible-Sidebar/tree/master
+   git clone https://github.com/kashif365/Collapsible-Sidebar
