@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Dashboard</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Overlay for mobile -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">Mosaic</div>
+        <div class="logo-icon">M</div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-item active" data-tab="dashboard">
+          <a href="#" class="nav-link">
+            <i class="fas fa-home nav-icon"></i>
+            <span class="nav-text">Dashboard</span>
+          </a>
+        </div>
+        <div class="nav-item" data-tab="analytics">
+          <a href="#" class="nav-link">
+            <i class="fas fa-chart-line nav-icon"></i>
+            <span class="nav-text">Analytics</span>
+          </a>
+        </div>
+        <div class="nav-item" data-tab="messages">
+          <a href="#" class="nav-link">
+            <i class="fas fa-envelope nav-icon"></i>
+            <span class="nav-text">Messages</span>
+          </a>
+        </div>
+        <div class="nav-item" data-tab="team">
+          <a href="#" class="nav-link">
+            <i class="fas fa-users nav-icon"></i>
+            <span class="nav-text">Team</span>
+          </a>
+        </div>
+        <div class="nav-item" data-tab="settings">
+          <a href="#" class="nav-link">
+            <i class="fas fa-cog nav-icon"></i>
+            <span class="nav-text">Settings</span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="fas fa-sign-out-alt nav-icon"></i>
+            <span class="nav-text">Logout</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content" id="main">
+      <header class="header">
+        <button class="toggle-btn" id="mobileToggleBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+        <h1 class="header-title">Dashboard</h1>
+        <div class="header-actions">
+          <button class="header-btn">
+            <i class="fas fa-bell"></i>
+          </button>
+          <button class="header-btn">
+            <i class="fas fa-envelope"></i>
+          </button>
+          <div class="user-avatar" id="userAvatar">KH</div>
+        </div>
+      </header>
+      <div class="tab-content active" id="dashboard-tab">
+        <div class="dashboard-grid">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Total Revenue</h3>
+              <div class="card-icon blue">
+                <i class="fas fa-dollar-sign"></i>
+              </div>
+            </div>
+            <div class="card-value">$24,780</div>
+            <p class="card-description">+12% from last month</p>
+            <div class="chart-container">
+              <img
+                src="./images/img-01.jpg"
+                alt="Revenue chart"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  border-radius: 0.5rem;
+                "
+              />
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">New Users</h3>
+              <div class="card-icon green">
+                <i class="fas fa-users"></i>
+              </div>
+            </div>
+            <div class="card-value">1,254</div>
+            <p class="card-description">+8.2% from last month</p>
+            <div class="chart-container">
+              <img
+                src="./images/img-02.jpg"
+                alt="Revenue chart"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  border-radius: 0.5rem;
+                "
+              />
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Active Projects</h3>
+              <div class="card-icon orange">
+                <i class="fas fa-project-diagram"></i>
+              </div>
+            </div>
+            <div class="card-value">42</div>
+            <p class="card-description">+3 from last week</p>
+            <div class="chart-container">
+              <img
+                src="./images/img-03.jpg"
+                alt="Revenue chart"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  border-radius: 0.5rem;
+                "
+              />
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Conversion Rate</h3>
+              <div class="card-icon purple">
+                <i class="fas fa-percentage"></i>
+              </div>
+            </div>
+            <div class="card-value">3.6%</div>
+            <p class="card-description">+0.4% from last month</p>
+            <div class="chart-container">
+              <img
+                src="./images/img-04.jpg"
+                alt="Revenue chart"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  border-radius: 0.5rem;
+                "
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Analytics Tab -->
+      <div class="tab-content" id="analytics-tab">
+        <div class="analytics-grid">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Traffic Sources</h3>
+              <div class="card-icon purple">
+                <i class="fas fa-traffic-light"></i>
+              </div>
+            </div>
+            <div class="chart-container">
+              <img src="./images/traffic.jpg" alt="Traffic sources" 
+              style="width: 100%; height:100%; object-fit: cover; border-radius: 0.5rem;"/>
+            </div>
+            <div class="card-stats">
+              <div class="stat-item">
+                <span class="stat-value">42%</span>
+                <span class="stat-label">Organic</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">35%</span>
+                <span class="stat-label">Direct</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">23%</span>
+                <span class="stat-label">Referral</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">User Engagement</h3>
+              <div class="card-icon green">
+                <i class="fas fa-user-clock"></i>
+              </div>
+            </div>
+            <div class="chart-container">
+              <img src="./images/user.jpg" alt="User engagement" 
+              style="width: 100%; height: 100%; object-fit:cover; border-radius:0.5rem;"/>
+            </div>
+            <div class="card-meta">
+              <p>Avg. session duration: 4m 32s</p>
+              <p>Pages per visit: 3.8</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Messages Tab -->
+      <div class="tab-content" id="messages-tab">
+        <div class="messages-grid">
+          <div class="card message-card">
+            <div class="message-header">
+              <h3><i class="fas fa-inbox"></i> Inbox</h3>
+              <span class="badge">12 new</span>
+            </div>
+            <div class="message-list">
+              <div class="message-item unread">
+                <div class="message-sender" id="currentUserName">John Doe</div>
+                <div class="message-preview">Meeting tomorrow at 10am</div>
+                <div class="message-time">10:30 AM</div>
+              </div>
+              <div class="message-item">
+                <div class="message-sender">Marketing Team</div>
+                <div class="message-preview">
+                  New campaign performance report
+                </div>
+                <div class="message-time">Yesterday</div>
+              </div>
+              <!-- More messages... -->
+            </div>
+          </div>
+
+          <div class="card message-stats">
+            <div class="card-header">
+              <h3 class="card-title">Message Statistics</h3>
+              <div class="card-icon blue">
+                <i class="fas fa-chart-pie"></i>
+              </div>
+            </div>
+            <div class="chart-container" style="height: auto;">
+              <img src="./images/message.jpg" alt="Message statistics" 
+              style="width: 100%; height:40vh; object-fit: cover; border-radius: 0.5rem;"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Team Tab -->
+      <div class="tab-content" id="team-tab">
+        <div class="team-grid">
+          <div class="card team-list">
+            <div class="card-header">
+              <h3 class="card-title">Team Members</h3>
+              <div class="card-icon orange">
+                <i class="fas fa-users"></i>
+              </div>
+            </div>
+            <div class="team-members">
+              <div class="team-member">
+                <div class="member-avatar" id="teamUserAvatar">JD</div>
+                <div class="member-info">
+                  <div class="member-name" id="teamUserName">John Doe</div>
+                  <div class="member-role">Project Manager</div>
+                </div>
+                <div class="member-status online"></div>
+              </div>
+              <!-- More team members... -->
+            </div>
+          </div>
+
+          <div class="card team-stats">
+            <div class="card-header">
+              <h3 class="card-title">Team Activity</h3>
+              <div class="card-icon green">
+                <i class="fas fa-tasks"></i>
+              </div>
+            </div>
+            <div class="chart-container" style="height: auto;">
+              <img src="./images/team activity.jpg" alt="Team activity" 
+              style="width: 100%; height: 50vh; border-radius: 0.5rem; object-fit:cover;"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Settings Tab -->
+      <div class="tab-content" id="settings-tab">
+        <div class="settings-grid">
+          <div class="card account-settings">
+            <div class="card-header">
+              <h3 class="card-title">Account Settings</h3>
+              <div class="card-icon purple">
+                <i class="fas fa-user-cog"></i>
+              </div>
+            </div>
+            <form class="settings-form" id="profileForm">
+              <div class="form-group">
+                <label>First Name</label>
+                <input
+                  type="text"
+                  id="firstName"
+                  placeholder="Enter first name"
+                />
+              </div>
+              <div class="form-group">
+                <label>Last Name</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  placeholder="Enter last name"
+                />
+              </div>
+              <button type="submit" class="save-btn">Save Changes</button>
+            </form>
+          </div>
+          <div class="card notification-settings">
+            <div class="card-header">
+              <h3 class="card-title">Notifications</h3>
+              <div class="card-icon blue">
+                <i class="fas fa-bell"></i>
+              </div>
+            </div>
+            <div class="notification-options">
+              <div class="option-item">
+                <label>Email Notifications</label>
+                <label class="switch">
+                  <input type="checkbox" checked />
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
